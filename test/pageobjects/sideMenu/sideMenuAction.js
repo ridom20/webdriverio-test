@@ -8,6 +8,9 @@ class SideMenuAction {
     async clickResetAction () {
         await menuLocator.resetAction.click();
     }
+    async clickLogoutAction () {
+        await menuLocator.logoutAction.click();
+    }
 
     async clickCloseAction () {
         await menuLocator.clostAction.click();

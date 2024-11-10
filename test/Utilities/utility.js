@@ -20,8 +20,9 @@ class Utility {
         return result;
     }
     async convertTextToNumber(text) {
-        const value = Number(text.replace(/[^0-9]/g, ""));
-        return value;
+        const cleanedText = text.replace(/[^0-9.]/g, "");
+        const value = parseFloat(cleanedText);
+        return isNaN(value) ? 0 : value;
     }
 }
 
